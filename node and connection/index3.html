@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="test1.css" />
+    <title>random app</title>
+  </head>
+  <body>
+    <main>
+      <label><h2>Login Page:</h2></label>
+      <input placeholder="Add name" id="name-input" />
+      <br /><br />
+      <div>
+        <input type="number" placeholder="Enter_mobile.no" id="mob-input" />
+      </div>
+      <br /><br />
+      <div>
+        <input type="text" placeholder="Enter_email.no" id="email-input" />
+      </div>
+      <button id="add-name-btn" class="ob">Submit</button>
+      <br /><br /><br />
+      <div>
+        <input placeholder="search by name" id="search-input" />
+        <button id="search-btn" class="ob">Search</button>
+      </div>
+      <table id="table">
+        <thead>
+          <th>ID</th>
+          <th>NAME</th>
+          <th>Date</th>
+          <th>Mobile.No</th>
+          <th>Email_no.</th>
+          <th>Delete</th>
+          <th>Edit</th>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <section hidden id="update-row">
+        <lable>Name:</lable>
+        <input type="text" id="update-name-input" />
+        <button id="update-row-btn">Update</button>
+      </section>
+    </main>
+    <script src="test.js"></script>
+  </body>
+</html>

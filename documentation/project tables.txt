@@ -1,0 +1,66 @@
+
+create table Hotel(
+                   Hotel_name varchar(40) primary key,
+                   Hotel_Address varchar(50)
+                   );
+
+create table Employee(
+                   E_id varchar(4) primary key,
+                   E_Name varchar(20) not null,
+                   E_mobile_no numeric(10) not null,
+                   E_role varchar(20) not null,
+                   E_E_mail varchar(30)
+                   );
+
+create table Trip(
+                   Trip_id varchar(4) primary key,
+                   location varchar(20),
+                   price numeric(7,2),
+                   vehicle varchar(10),
+                   E_id varchar(4),
+                   Hotel_name varchar(40),
+                   foreign key (E_id) references Employee (E_id),
+                   foreign key (Hotel_name) references Hotel (Hotel_name)
+                   );
+                  
+                  
+
+insert into Hotel values("The Anvaya Beach Resort","Bali");  
+insert into Hotel values("Grand Mirage Resort","Bali");
+insert into Hotel values("The Westin Resort","Bali");
+insert into Hotel values("The White Resort","Goa");
+insert into Hotel values("Taj Resort and Convation Center","Goa");
+insert into Hotel values("Acron Waterfront Resort","Goa");
+insert into Hotel values("Furaveri Maldives","Maldives");
+insert into Hotel values("Sun Siyam Iru Veli","Maldives");
+insert into Hotel values("Paradise Island Resort","Maldives");
+
+insert into Employee values("E1","Robert",9999999999,"Driver","RobertE1@gmail.com");
+insert into Employee values("E2","Sam",9999999998,"Tour_guide","SamE2@gmail.com");
+insert into Employee values("E3","Sandy",9999999997,"Driver","SandyE3@gmail.com");
+insert into Employee values("E4","Joseph",9999999996,"Tour_guide","JosephE4@gmail.com");
+insert into Employee values("E5","Vicky",9999999995,"Tour_guide","VickyE5@gmail.com");
+insert into Employee values("E6","Ronny",9999999994,"Tour_guide","RonnyE6@gmail.com");
+insert into Employee values("E7","Raj",9999999993,"Driver","RajE7@gmail.com");
+insert into Employee values("E8","Rambo",9999999992,"Tour_guide","RamboE8@gmail.com");
+insert into Employee values("E9","Bhushan",9999999991,"Driver","BhushanE9@gmail.com");
+
+
+insert into Trip values("T1","Bali",15099.99,"Car","E2","The Anvaya Beach Resort");
+insert into Trip values("T2","Bali",23049.99,"Bus","E4","Grand Mirage Resort");
+insert into Trip values("T3","Bali",9099.99,"Car","E5","The Westin Resort");
+insert into Trip values("T4","Bali",15099.99,"Plane","E5","The Westin Resort");
+insert into Trip values("T5","Goa",20599.99,"Plane","E6","The White Resort");
+insert into Trip values("T6","Goa",20499.99,"Car","E8","Taj Resort and Convation Center");
+insert into Trip values("T7","Goa",25499.99,"Bus","E8","Taj Resort and Convation Center");
+insert into Trip values("T8","Goa",10599.99,"Car","E4","Acron Waterfront Resort");
+insert into Trip values("T9","Maldives",20099.99,"Bus","E6","Furaveri Maldives");
+insert into Trip values("T10","Maldives",20599.99,"Plane","E2","Sun Siyam Iru Veli");
+insert into Trip values("T11","Maldives",14999.99,"Car","E8","Paradise Island Resort");
+insert into Trip values("T12","Maldives",19999.99,"Bus","E8","Paradise Island Resort");
+
+select * from Hotel;
+
+select * from Employee;
+
+select * from Trip;

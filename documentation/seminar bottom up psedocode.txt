@@ -1,0 +1,32 @@
+//Dynamic[Bottom up] algorithm for the "maximum profit earn by broker in share market"
+
+
+ //Here price is price table of share's showing it's daily price
+ // n is no of day whose price given in price table
+ // k is how many maximum time's share can buy and sell for the maximum profit
+
+   maxprofit(price,n,k)
+
+1.|   profit [k+1][n+1]  // stores the maximum profit of atmos k+1 transaction up to n+1 day
+
+2.|   for i = 0 to i <= k
+
+3.|       pofit[i][0] = 0
+
+4.|   for j = 0 to j <= n
+
+5.|       profit[0][j] = 0
+
+6.|   for i = 1 to i <= k
+
+7.|        for j = 1 to j < n
+
+8.|           mp = -∞
+
+9.|           for m = 0 to m < j
+
+10.|              mp = max( mp , price[j] - price[m] + profit[i-1][m]
+
+11.|           profit[i][j] = max( profit[i][j-1] , mp )
+
+12.|   return profit[k][n-1]

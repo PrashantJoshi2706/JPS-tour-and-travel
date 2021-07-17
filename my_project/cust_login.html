@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF -8" />
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0" />
+
+    <title></title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="cust_login.css" />
+  </head>
+
+  <body>
+    <nav class="nav">
+      <div class="nav-menu flex-row">
+        <div class="nav-brand">
+          <a href="./homepage.html" class="text-grey">Back to homepage</a>
+        </div>
+        <div class="toggle-collapse">
+          <div class="toggle-icons">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+        <div class="nav-items-wrapper">
+          <ul class="nav-items">
+            <div class="nav-link">
+              <a href="../my_project/Trip.html">Trips</a>
+            </div>
+            
+            <div class="nav-link">
+              <a href="#" class="press">contact us</a>
+            </div>
+            <div class="nav-link">
+              <a href="./login.html">login</a>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="header">
+        <marquee behavior="scroll" direction="left">
+          <h2>JPS BOOKING FORM</h2></marquee
+        >
+      </div>
+      <form class="form" , id="form">
+        <div class="form-control">
+          <label>Customer ID</label>
+          <input
+            type="number"
+            name=""
+            id="customer_id"
+            placeholder="Enter Customer ID"
+            autocomplete="off"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Erro msg</small>
+        </div>
+
+        <!--  <div class="form-control">
+          <label>Employee ID</label>
+          <input
+            type="number"
+            name=""
+            id="emp_id"
+            placeholder="Enter Customer ID"
+            autocomplete="off"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Erro msg</small>
+        </div>-->
+
+        <div class="form-control">
+          <label>Trip ID</label>
+          <!-- <input
+            type="number"
+            name=""
+            id="trip_id"
+            placeholder="Enter Customer ID"
+            autocomplete="off"
+          />-->
+          <main>
+            <select id="trip_id"></select>
+          </main>
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Erro msg</small>
+        </div>
+
+        <button class="btn" id="sub-btn">Submit</button>
+        
+      </form>
+    </div>
+    <script src="test-2.js"></script>
+  </body>
+</html>
